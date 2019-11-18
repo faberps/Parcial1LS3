@@ -5,39 +5,39 @@
         public $aEstado;
 
         function __construct($pNombre,$pFecha,$pEstado){
-            $this->nombre = $pNombre;
-            $this->fechaCreacion = $pFecha; 
-            $this->estado = $pEstado;
+            $this->aNombre = $pNombre;
+            $this->aFecha = $pFecha; 
+            $this->aEstado = $pEstado;
         }
         public function getNombre()
         {
-            return $this->nombre;
+            return $this->aNombre;
         }
         public function setNombre($aNombre)
         {
-            $this->nombre = $aNombre;
+            $this->aNombre = $aNombre;
 
             return $this;
         }
         public function getFechaCreacion()
         {
-            return $this->fechaCreacion;
+            return $this->aFecha;
         }
         public function setFechaCreacion($aFecha)
         {
-            $this->fechaCreacion = $aFecha;
+            $this->aFecha = $aFecha;
 
             return $this;
         }
         public function getEstado()
         {
-            return $this->estado;
+            return $this->aEstado;
         }
         public function setEstado($aEstado)
         {
-            $this->estado = $aEstado;
+            
 
-            return $this;
+            return $this->aEstado = $aEstado;;
         }
     }
 ?>

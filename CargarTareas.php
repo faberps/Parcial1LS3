@@ -15,7 +15,7 @@
         
         $lTareas = array($vTserFeliz,$vTPlanearS);
 
-        var_dump($lTareas);
+        var_dump($vTserFeliz);
 
         $json_tareas = json_encode($lTareas);
         $handler = fopen($vPath, "w+");

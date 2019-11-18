@@ -64,7 +64,7 @@
         </thead>
         <tbody>
           <?php
-            $i = 1;
+            $i = 0;
             foreach($Tareas as $Tarea){
               echo '<tr onClick=tachar_enviar(this,'.$i.','.$vUsuario.')>';
               echo '<td>.'.$vUsuario.'</td>';
