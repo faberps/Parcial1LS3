@@ -1,5 +1,5 @@
 <?php
-
+  include_once 'CargarTareas.php';
 ?>
 <!doctype html>
 <html lang="en">

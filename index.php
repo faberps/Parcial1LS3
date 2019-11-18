@@ -29,7 +29,7 @@
                   <div class="input-group mb-3">
                     <input type="text" name="cedula" id="cedula"
                      class="form-control input_user" placeholder="Identficacion"
-                      pattern="[0-9]{4,14}" 
+                      pattern="[0-9]{3,14}" 
                       oninvalid="setCustomValidity('El campo debe contener solo numeros, con almenos 4 caracteres y maximo 14')"
                       oninput="setCustomValidity('')"
                       >
