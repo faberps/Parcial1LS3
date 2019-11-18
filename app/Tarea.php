@@ -1,7 +1,5 @@
 <?php
-include 'Tarea.cls.php';
-include 'GestorUsuario.php';
-include 'getUser.php'
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -18,56 +16,43 @@ include 'getUser.php'
   <body>
     
   <nav class="navbar  fixed-top navbar-expand-md navbar-light bg-light">
-    <a class="navbar-brand abs" href="#">
-      <img src="../img/logo2.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    <a class="navbar-brand " href="#">
+      <img src="../img/logo2.png" width="30" height="30" class="align-top" alt="">
       WeekPlan
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="navbar-collapse collapse" id="collapsingNavbar">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    <div class="navbar-collapse collapse" id="navbarSupportedContent">
 
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#salir" data-target="#myModal" data-toggle="modal">SALIR</a>
-            </li>
+            
+            
+                <a class="nav-link" href="../index.html" data-target="#myModal" data-toggle="modal">SALIR</a>
+            
         </ul>
     </div>
   </nav>
     <div class="container">
+          
       <div class="centrado">
         <h2>¡Bienvedido!</h2>
           <h5>WeekPlan, tu sistema de tareas favorito</h5>
-          <p>Aqui podras llevar un control de tareas pendientes</p>
-          <p>Añade una  <b>nueva tarea:</b></p>
+          <p>Aquí podras llevar un control de tareas pendientes</p>
+         
+          <div class="guia">
+                  <h5>Instrucciones</h5>
+                  <p>Tareas <div class="color-green">Sin Completar</div> <div class="color-gray">Completada</div> 
+                      haz clic en el recuadro <img src="../img/cheque.png"> para terminar la tarea
+                    </p>
+              </div>
+              <p>Añade una  <b>nueva tarea:</b></p>
           <input type="text" placeholder="Nombre de la tarea" name="codigo" id="codigo">
           <button id="btn_enviar" type="submit">Enviar</button>
-          <div class="guia">
-                  <h2>TAREAS</h2>
-                  <div class="color-green">Sin Completar</div>
-                  <div class="color-gray">Completada</div>
-                  <p>haz clic en el recuadro <img src="../img/cheque.png"> para terminar la tarea</p>
-              </div>
           </div>
+
           
-          <div class="estCodigo">
-              <p>Su número de identificación es: <b><?php echo $usuario->getId(); ?></b>
-              </p>
-          </div>
-
-          <div class="guia">
-                  <h2>TAREAS</h2>
-                  <div class="color-green">Sin Completar</div>
-                  <div class="color-gray">Completada</div>
-                  <p>haz clic en el recuadro <img src="../img/cheque.png"> para terminar la tarea</p>
-              </div>
-          </div>
-
-          <div class="table-responsive">
-            <table class="table">
-              Hola
-            </table>
-          </div>
       </div>
     </div>
     
