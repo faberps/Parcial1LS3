@@ -1,10 +1,10 @@
 <?php
     class Tarea{
-        public $aNombre = null;
-        public $aFecha = null;
-        public $aEstado = false;
+        public $aNombre;
+        public $aFecha;
+        public $aEstado;
 
-        function __construct(string $pNombre, string $pFecha, bool $pEstado){
+        function __construct($pNombre,$pFecha,$pEstado){
             $this->nombre = $pNombre;
             $this->fechaCreacion = $pFecha; 
             $this->estado = $pEstado;

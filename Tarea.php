@@ -10,14 +10,15 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/theme.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/theme.css" type="text/css" media="All">
+    <link rel="stylesheet" href="css/Estilos.css" class="rel">
     <title>Week Plan</title>
   </head>
   <body>
     
   <nav class="navbar  fixed-top navbar-expand-md navbar-light bg-light">
     <a class="navbar-brand " href="#">
-      <img src="../img/logo2.png" width="30" height="30" class="align-top" alt="">
+      <img src="img/logo2.png" width="30" height="30" class="align-top" alt="">
       WeekPlan
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
@@ -27,15 +28,12 @@
     <div class="navbar-collapse collapse" id="navbarSupportedContent">
 
         <ul class="navbar-nav ml-auto">
-            
-            
-                <a class="nav-link" href="../index.html" data-target="#myModal" data-toggle="modal">SALIR</a>
+                <a class="nav-link" href="index.html" data-target="#myModal" data-toggle="modal">SALIR</a>
             
         </ul>
     </div>
   </nav>
     <div class="container">
-          
       <div class="centrado">
         <h2>¡Bienvedido!</h2>
           <h5>WeekPlan, tu sistema de tareas favorito</h5>
@@ -44,7 +42,7 @@
           <div class="guia">
                   <h5>Instrucciones</h5>
                   <p>Tareas <div class="color-green">Sin Completar</div> <div class="color-gray">Completada</div> 
-                      haz clic en el recuadro <img src="../img/cheque.png"> para terminar la tarea
+                      haz clic en el recuadro <img src="img/cheque.png"> para terminar la tarea
                     </p>
               </div>
               <p>Añade una  <b>nueva tarea:</b></p>
@@ -54,6 +52,31 @@
 
           
       </div>
+    </div>
+    <div class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+            $i = 1;
+            foreach($Tareas as $Tarea){
+              echo '<tr onClick=tachar_enviar(this,'.$i.','.$vUsuario.')>';
+              echo '<td>.'.$vUsuario.'</td>';
+              echo '<td>.'.$Tarea[$i]["aNombre"].'</td>';
+              echo '<td>.'.$Tarea[$i]["aFecha"].'</td>';
+              echo '</tr>';
+              $i = $i+1;
+            }
+          ?>
+          <tr></tr>
+        </tbody>
+      </table>
     </div>
     
   
